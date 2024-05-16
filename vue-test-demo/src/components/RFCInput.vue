@@ -1,5 +1,9 @@
 <template setup>
-  <div>Esto será el componente RFCInput</div>
+  <div>
+    <input v-model="inputValue" @input="validateRFC" placeholder="Enter RFC" />
+
+    <p class="invalid" v-if="!isValid">RFC no válido</p>
+  </div>
 </template>
 
 <script setup>
